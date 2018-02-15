@@ -1,0 +1,8 @@
+format: '&8(&aPuzzle&8) &b&lUnscramble the word! &7The word is &e$word'
+interval: 400
+words:
+  - 'wand'
+  - 'harry potter'
+  - 'crystal ball'
+  - 'spell'
+  - 'magic'

@@ -1,0 +1,7 @@
+name: ChatPuzzles
+version: 1.0.0
+main: com.rowlingsrealm.chatpuzzles.ChatPuzzlesPlugin
+
+description: Chat puzzles for Rowling's Realm!
+website: http://rowlingsrealm.com
+authors: [Tyler Grissom]
