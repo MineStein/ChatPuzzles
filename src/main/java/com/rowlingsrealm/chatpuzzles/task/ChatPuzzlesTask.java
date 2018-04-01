@@ -51,7 +51,19 @@ public class ChatPuzzlesTask extends BukkitRunnable {
         do {
             pickWord();
 
-            word = scramble(cpm.getCurrentWord().toLowerCase().replace(" ", ""));
+            String[] split = cpm.getCurrentWord().toLowerCase().split(" ");
+
+            if (split.length <= 1)  word = scramble(cpm.getCurrentWord().toLowerCase());
+            else {
+                StringBuilder b = new StringBuilder();
+
+                for (String str :
+                        split) {
+                    b.append(scramble(str.toLowerCase())).append(" ");
+                }
+
+                word = b.toString().trim();
+            }
         } while (word.trim().equalsIgnoreCase(cpm.getCurrentWord().trim()));
 
         String format = cpm.format(word);

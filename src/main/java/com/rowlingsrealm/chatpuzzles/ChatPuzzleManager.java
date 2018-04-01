@@ -25,7 +25,7 @@ public class ChatPuzzleManager {
     }
 
     public String getFormat() {
-        return plugin.getConfig().getString("format", "&8(&aPuzzle&8) &b&lUnscramble the word! &7The word is &e$word");
+        return plugin.getConfig().getString("format", "&8(&aPuzzle&8) &b&lUnscramble the puzzle! &7The word is &e$word");
     }
 
     public String format(String word) {

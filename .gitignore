@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/inspectionProfiles/
+src/test/
+target/classes/com/rowlingsrealm/chatpuzzles/command/
+target/classes/com/rowlingsrealm/chatpuzzles/config/
+target/classes/com/rowlingsrealm/chatpuzzles/item/
+target/classes/com/rowlingsrealm/chatpuzzles/listener/JoinListener.class
+target/classes/com/rowlingsrealm/chatpuzzles/menu/
+target/classes/com/rowlingsrealm/chatpuzzles/message/
+target/generated-sources/
