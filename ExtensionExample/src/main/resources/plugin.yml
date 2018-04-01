@@ -1,0 +1,5 @@
+name: ExtensionExample
+version: 1.0.0
+main: me.tylergrissom.chatpuzzles.extensionexample.ExamplePlugin
+
+depend: [ChatPuzzles]

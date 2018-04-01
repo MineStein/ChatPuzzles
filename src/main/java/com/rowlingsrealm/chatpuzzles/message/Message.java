@@ -17,7 +17,7 @@ public enum Message {
     public String get() {
         FileConfiguration config = ChatPuzzlesPlugin.getInstance().getConfig();
 
-        return ChatColor.translateAlternateColorCodes('&', config.getString("messages." + this.toString().toLowerCase()));
+        return ChatColor.translateAlternateColorCodes('&', config.getString("message." + this.toString().toLowerCase()));
     }
 
     public String get(String replace, String with) {

@@ -17,7 +17,8 @@ import java.util.List;
 @AllArgsConstructor
 public class PuzzlesCommand extends CommandBase {
 
-    @Getter private ChatPuzzlesPlugin plugin;
+    @Getter
+    private ChatPuzzlesPlugin plugin;
 
     List<String> tab(CommandSender sender, Command command, String[] args) {
         List<String> list = new ArrayList<>();

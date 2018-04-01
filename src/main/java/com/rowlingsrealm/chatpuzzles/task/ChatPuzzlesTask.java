@@ -2,6 +2,7 @@ package com.rowlingsrealm.chatpuzzles.task;
 
 import com.rowlingsrealm.chatpuzzles.ChatPuzzleManager;
 import com.rowlingsrealm.chatpuzzles.ChatPuzzlesPlugin;
+import com.rowlingsrealm.chatpuzzles.event.PuzzleAnnounceEvent;
 import io.netty.util.internal.ThreadLocalRandom;
 import lombok.Getter;
 import org.bukkit.Bukkit;
@@ -18,15 +19,6 @@ public class ChatPuzzlesTask extends BukkitRunnable {
         this.plugin = plugin;
     }
 
-    public void pickWord() {
-        ChatPuzzleManager cpm = plugin.getChatPuzzleManager();
-
-        String str = cpm.getPuzzles().get(ThreadLocalRandom.current().nextInt(cpm.getPuzzles().size()));
-
-        cpm.setCurrentWord(str);
-        cpm.setCompleted(false);
-    }
-
     private String scramble(String inputString) {
         char a[] = inputString.toCharArray();
 
@@ -41,15 +33,34 @@ public class ChatPuzzlesTask extends BukkitRunnable {
 
     public void run() {
         ChatPuzzleManager cpm = plugin.getChatPuzzleManager();
-        
+
+        boolean completed = true;
+
         if (!cpm.isCompleted()) {
+            completed = false;
+
             Bukkit.broadcastMessage("§8(§aPuzzle§8) §4§lNo one got the word! It was §c§l" + cpm.getCurrentWord());
         }
 
-        String word;
+        String lastWord = cpm.getCurrentWord();
+
+        String word = "";
+
+        PuzzleAnnounceEvent event;
 
         do {
-            pickWord();
+            String str = cpm.getPuzzles().get(ThreadLocalRandom.current().nextInt(cpm.getPuzzles().size()));
+
+            event = new PuzzleAnnounceEvent(str, lastWord, completed);
+
+            Bukkit.getServer().getPluginManager().callEvent(event);
+
+            if (event.isCancelled()) break;
+
+            str = event.getWord();
+
+            cpm.setCurrentWord(str);
+            cpm.setCompleted(false);
 
             String[] split = cpm.getCurrentWord().toLowerCase().split(" ");
 
@@ -57,14 +68,16 @@ public class ChatPuzzlesTask extends BukkitRunnable {
             else {
                 StringBuilder b = new StringBuilder();
 
-                for (String str :
+                for (String s :
                         split) {
-                    b.append(scramble(str.toLowerCase())).append(" ");
+                    b.append(scramble(s.toLowerCase())).append(" ");
                 }
 
                 word = b.toString().trim();
             }
         } while (word.trim().equalsIgnoreCase(cpm.getCurrentWord().trim()));
+
+        if (event.isCancelled()) return;
 
         String format = cpm.format(word);
 

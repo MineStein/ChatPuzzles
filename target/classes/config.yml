@@ -8,7 +8,6 @@ message:
   format: '&8(&aPuzzle&8) &b&lUnscramble the word! &7The scrambled word is &e$word'
   no_permission: '&4&lX &cYou do not have permission!'
   only_players: '&4&lX &cOnly players can do that!'
-  reloaded_config: '&aReloaded ChatPuzzles'
 rewards:
   - 'broadcast %target% got the word!'
   - 'eco give %target% 10'
