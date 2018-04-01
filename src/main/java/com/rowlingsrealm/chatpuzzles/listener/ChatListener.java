@@ -33,6 +33,8 @@ public class ChatListener implements Listener {
         if (cpm.isCompleted()) return;
 
         if (event.getMessage().equalsIgnoreCase(cpm.getCurrentWord())) {
+            if (!p.hasPermission("puzzles.answer")) return;
+
             PuzzleCompletionEvent e = new PuzzleCompletionEvent(cpm.getCurrentWord(), p);
 
             Bukkit.getPluginManager().callEvent(e);

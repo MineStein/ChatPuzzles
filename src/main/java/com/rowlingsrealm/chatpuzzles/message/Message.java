@@ -12,7 +12,8 @@ public enum Message {
     FORMAT,
     NO_PERMISSION,
     ONLY_PLAYERS,
-    RELOADED_CONFIG;
+    RELOADED_CONFIG,
+    IN_PROGRESS;
 
     public String get() {
         FileConfiguration config = ChatPuzzlesPlugin.getInstance().getConfig();

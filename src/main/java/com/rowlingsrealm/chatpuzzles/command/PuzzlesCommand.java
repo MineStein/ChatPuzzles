@@ -1,11 +1,14 @@
 package com.rowlingsrealm.chatpuzzles.command;
 
 import com.rowlingsrealm.chatpuzzles.ChatPuzzlesPlugin;
+import com.rowlingsrealm.chatpuzzles.menu.ManagePuzzlesGUI;
+import com.rowlingsrealm.chatpuzzles.menu.MenuGUI;
 import com.rowlingsrealm.chatpuzzles.message.Message;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,15 +49,36 @@ public class PuzzlesCommand extends CommandBase {
             String arg = args[0];
 
             if (arg.equalsIgnoreCase("reload")) {
-                if (sender.hasPermission("chatpuzzles.reload")) {
-                    plugin.reloadConfig();
+                if (sender.hasPermission("puzzles.reload")) {
+                    if (sender.hasPermission("chatpuzzles.reload")) {
+                        plugin.reloadConfig();
 
-                    sender.sendMessage(Message.RELOADED_CONFIG.get());
+                        sender.sendMessage(Message.RELOADED_CONFIG.get());
+                    } else {
+                        sender.sendMessage(Message.NO_PERMISSION.get());
+                    }
                 } else {
                     sender.sendMessage(Message.NO_PERMISSION.get());
                 }
-            } else if (arg.equalsIgnoreCase("manage") || arg.equalsIgnoreCase("stats")) {
-                sender.sendMessage("§4§lX §cThis feature is coming soon!");
+            } else if (arg.equalsIgnoreCase("manage")) {
+                if (sender.hasPermission("puzzles.manage")) {
+                    if (sender instanceof Player) {
+                        Player p = ((Player) sender);
+                        MenuGUI gui = new ManagePuzzlesGUI(plugin, 0);
+
+                        gui.show(p);
+                    } else {
+                        sender.sendMessage(Message.ONLY_PLAYERS.get());
+                    }
+                } else {
+                    sender.sendMessage(Message.NO_PERMISSION.get());
+                }
+            } else if (arg.equalsIgnoreCase("stats")) {
+                if (sender.hasPermission("puzzles.stats")) {
+                    sender.sendMessage("§4§lX §cThis feature is coming soon!");
+                } else {
+                    sender.sendMessage(Message.NO_PERMISSION.get());
+                }
             }
         }
     }

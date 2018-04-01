@@ -6,7 +6,11 @@ import com.rowlingsrealm.chatpuzzles.event.PuzzleAnnounceEvent;
 import io.netty.util.internal.ThreadLocalRandom;
 import lombok.Getter;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
+
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 /**
  * Copyright Tyler Grissom 2018
@@ -81,6 +85,9 @@ public class ChatPuzzlesTask extends BukkitRunnable {
 
         String format = cpm.format(word);
 
-        Bukkit.broadcastMessage(format);
+        Bukkit.getOnlinePlayers()
+                .stream()
+                .filter((Predicate<Player>) player -> player.hasPermission("puzzles.view"))
+                .forEach((Consumer<Player>) player -> player.sendMessage(format));
     }
 }

@@ -10,3 +10,34 @@ commands:
   puzzles:
     description: Check puzzle stats, reload, or manage puzzles.
     aliases: [puzzle]
+
+permissions:
+  puzzles.*:
+    description: 'All ChatPuzzles permissions'
+    children:
+      puzzles.user: true
+      puzzles.admin: true
+      puzzles.view: true
+      puzzles.answer: true
+      puzzles.stats: true
+      puzzles.manage: true
+      puzzles.reload: true
+  puzzles.user:
+    description: 'All user ChatPuzzles permissions'
+    children:
+      puzzles.view: true
+      puzzles.answer: true
+      puzzles.stats: true
+  puzzles.admin:
+    description: 'All admin ChatPuzzles permissions'
+    children:
+      puzzles.manage: true
+      puzzles.reload: true
+  puzzles.view:
+    description: 'See the puzzles in the chat'
+  puzzles.answer:
+    description: 'Answer and receive rewards for the puzzle'
+  puzzles.manage:
+    description: 'Manage the puzzles!'
+  puzzles.reload:
+    description: 'Reload ChatPuzzles'
