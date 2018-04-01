@@ -29,16 +29,10 @@ public class ChatListener implements Listener {
         ChatPuzzleManager cpm = plugin.getChatPuzzleManager();
         Player p = event.getPlayer();
 
-        Bukkit.getLogger().info("Debug 1");
-
         if (cpm.getCurrentWord() == null) return;
         if (cpm.isCompleted()) return;
 
-        Bukkit.getLogger().info("Debug 2");
-
         if (event.getMessage().equalsIgnoreCase(cpm.getCurrentWord())) {
-            Bukkit.getLogger().info("Debug 3");
-
             PuzzleCompletionEvent e = new PuzzleCompletionEvent(cpm.getCurrentWord(), p);
 
             Bukkit.getPluginManager().callEvent(e);
