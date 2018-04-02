@@ -1,7 +1,7 @@
 package me.tylergrissom.chatpuzzles.extensionexample;
 
-import com.rowlingsrealm.chatpuzzles.event.PuzzleAnnounceEvent;
-import com.rowlingsrealm.chatpuzzles.event.PuzzleCompletionEvent;
+import me.tylergrissom.chatpuzzles.event.PuzzleAnnounceEvent;
+import me.tylergrissom.chatpuzzles.event.PuzzleCompletionEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
