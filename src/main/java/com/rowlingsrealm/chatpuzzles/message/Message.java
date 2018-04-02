@@ -13,7 +13,11 @@ public enum Message {
     NO_PERMISSION,
     ONLY_PLAYERS,
     RELOADED_CONFIG,
-    IN_PROGRESS;
+    IN_PROGRESS,
+    CHAT_TO_CREATE,
+    WORD_CREATED,
+    WORD_REMOVED,
+    WORD_CANCELLED;
 
     public String get() {
         FileConfiguration config = ChatPuzzlesPlugin.getInstance().getConfig();

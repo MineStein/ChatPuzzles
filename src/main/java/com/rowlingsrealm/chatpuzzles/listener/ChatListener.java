@@ -4,6 +4,7 @@ import com.rowlingsrealm.chatpuzzles.ChatPuzzleManager;
 import com.rowlingsrealm.chatpuzzles.ChatPuzzlesPlugin;
 import com.rowlingsrealm.chatpuzzles.config.PlayerData;
 import com.rowlingsrealm.chatpuzzles.event.PuzzleCompletionEvent;
+import com.rowlingsrealm.chatpuzzles.message.Message;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -11,23 +12,52 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Copyright Tyler Grissom 2018
  */
 public class ChatListener implements Listener {
 
-    @Getter private ChatPuzzlesPlugin plugin;
+    @Getter
+    private ChatPuzzlesPlugin plugin;
+
+    @Getter
+    private static List<UUID> creatingWords;
 
     public ChatListener(ChatPuzzlesPlugin plugin) {
         this.plugin = plugin;
+    }
+
+    static {
+        creatingWords = new ArrayList<>();
     }
 
     @EventHandler
     public void onChat(final PlayerChatEvent event) {
         ChatPuzzleManager cpm = plugin.getChatPuzzleManager();
         Player p = event.getPlayer();
+        String msg = event.getMessage();
+
+        if (creatingWords.contains(p.getUniqueId())) {
+            if (msg.equalsIgnoreCase("!cancel")) {
+                getCreatingWords().remove(p.getUniqueId());
+
+                p.sendMessage(Message.WORD_CANCELLED.get());
+
+                event.setCancelled(true);
+            } else {
+                cpm.addPuzzle(msg.toLowerCase());
+
+                p.sendMessage(Message.WORD_CREATED.get());
+
+                getCreatingWords().remove(p.getUniqueId());
+
+                event.setCancelled(true);
+            }
+        }
 
         if (cpm.getCurrentWord() == null) return;
         if (cpm.isCompleted()) return;

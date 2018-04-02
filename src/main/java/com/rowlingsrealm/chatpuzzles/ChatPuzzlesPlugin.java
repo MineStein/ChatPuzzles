@@ -5,6 +5,8 @@ import com.rowlingsrealm.chatpuzzles.command.PuzzlesCommand;
 import com.rowlingsrealm.chatpuzzles.config.ConfigurationManager;
 import com.rowlingsrealm.chatpuzzles.listener.ChatListener;
 import com.rowlingsrealm.chatpuzzles.listener.JoinListener;
+import com.rowlingsrealm.chatpuzzles.listener.MenuListener;
+import com.rowlingsrealm.chatpuzzles.listener.QuitListener;
 import com.rowlingsrealm.chatpuzzles.task.ChatPuzzlesTask;
 import lombok.Getter;
 import org.bukkit.Bukkit;
@@ -48,6 +50,8 @@ public class ChatPuzzlesPlugin extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new ChatListener(this), this);
         Bukkit.getPluginManager().registerEvents(new JoinListener(this), this);
+        Bukkit.getPluginManager().registerEvents(new MenuListener(this), this);
+        Bukkit.getPluginManager().registerEvents(new QuitListener(this), this);
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new ChatPuzzlesTask(this), 0, chatPuzzleManager.getInterval());
     }

@@ -176,7 +176,8 @@ public abstract class MenuGUI{
         for(HumanEntity entity : inv.getViewers()){
             entity.closeInventory();
             if(msg!=null&&entity instanceof Player){
-                ((Player)entity).sendMessage(msg);
+                entity.sendMessage(msg);
+
                 viewers.add(((Player)entity));
             }
         }

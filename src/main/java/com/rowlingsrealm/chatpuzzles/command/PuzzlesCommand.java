@@ -64,7 +64,7 @@ public class PuzzlesCommand extends CommandBase {
                 if (sender.hasPermission("puzzles.manage")) {
                     if (sender instanceof Player) {
                         Player p = ((Player) sender);
-                        MenuGUI gui = new ManagePuzzlesGUI(plugin, 0);
+                        MenuGUI gui = new ManagePuzzlesGUI(plugin);
 
                         gui.show(p);
                     } else {

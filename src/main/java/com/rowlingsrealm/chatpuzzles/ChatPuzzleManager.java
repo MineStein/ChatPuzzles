@@ -50,4 +50,26 @@ public class ChatPuzzleManager {
 
         return words;
     }
+
+    public void addPuzzle(String puzzle) {
+        FileConfiguration config = plugin.getConfig();
+        List<String> words = getPuzzles();
+
+        words.add(puzzle);
+
+        config.set("words", words);
+
+        plugin.saveConfig();
+    }
+
+    public void removePuzzle(String puzzle) {
+        FileConfiguration config = plugin.getConfig();
+        List<String> words = getPuzzles();
+
+        words.remove(puzzle);
+
+        config.set("words", words);
+
+        plugin.saveConfig();
+    }
 }
