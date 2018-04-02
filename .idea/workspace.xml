@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0eb1ee68-92e6-4882-87c5-83892b727d79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/ChatPuzzleManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/ChatPuzzleManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/ChatPuzzlesPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/ChatPuzzlesPlugin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/command/CommandBase.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/CommandBase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/command/PuzzlesCommand.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/PuzzlesCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/config/ConfigurationManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/config/ConfigurationManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/config/PlayerData.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/config/PlayerData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/event/PuzzleAnnounceEvent.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/event/PuzzleAnnounceEvent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/event/PuzzleCompletionEvent.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/event/PuzzleCompletionEvent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/item/ItemBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/item/ItemBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/listener/ChatListener.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/listener/ChatListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/listener/JoinListener.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/listener/JoinListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/listener/MenuListener.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/listener/MenuListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/listener/QuitListener.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/listener/QuitListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/menu/ManagePuzzlesGUI.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/ManagePuzzlesGUI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/menu/MenuGUI.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/MenuGUI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/menu/YesNoCancelGUI.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/YesNoCancelGUI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/message/Message.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/message/Message.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/task/ChatPuzzlesTask.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/task/ChatPuzzlesTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/LeaderboardGUI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/StatsGUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExtensionExample/src/main/java/me/tylergrissom/chatpuzzles/extensionexample/ExamplePlugin.java" afterPath="$PROJECT_DIR$/ExtensionExample/src/main/java/me/tylergrissom/chatpuzzles/extensionexample/ExamplePlugin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/PuzzlesCommand.java" afterPath="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/PuzzlesCommand.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="567">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -60,9 +42,33 @@
       <file leaf-file-name="PuzzlesCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/PuzzlesCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="81" column="13" lean-forward="false" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+            <state relative-caret-position="702">
+              <caret line="81" column="61" lean-forward="false" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatsGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/StatsGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeaderboardGUI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/LeaderboardGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,39 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/listener/MenuListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChatListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/listener/ChatListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1350">
               <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuitListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/listener/QuitListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,8 +118,8 @@
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+            <state relative-caret-position="135">
+              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -203,6 +181,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rowlingsrealm/chatpuzzles/listener/ChatListener.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/ChatPuzzlesPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/StatsGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/PuzzlesCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/LeaderboardGUI.java" />
       </list>
     </option>
   </component>
@@ -310,6 +291,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chatpuzzles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChatPuzzles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatPuzzles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chatpuzzles" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChatPuzzles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatPuzzles" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chatpuzzles" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChatPuzzles" type="b2602c69:ProjectViewProjectNode" />
@@ -458,12 +457,12 @@
       <workItem from="1522544574951" duration="910000" />
       <workItem from="1522558503677" duration="5134000" />
       <workItem from="1522590243032" duration="17540000" />
-      <workItem from="1522682581625" duration="80000" />
+      <workItem from="1522682581625" duration="1171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43594000" />
+    <option name="totallyTimeSpent" value="44685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -509,22 +508,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/task/ChatPuzzlesTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1566">
@@ -813,8 +796,8 @@
         <state relative-caret-position="215">
           <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -887,22 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/PuzzlesCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="81" column="13" lean-forward="false" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/ChatPuzzleManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -921,9 +888,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="567">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/StatsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/command/PuzzlesCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="81" column="61" lean-forward="false" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/tylergrissom/chatpuzzles/menu/LeaderboardGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

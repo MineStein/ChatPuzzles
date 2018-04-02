@@ -3,6 +3,7 @@ package me.tylergrissom.chatpuzzles.command;
 import me.tylergrissom.chatpuzzles.ChatPuzzlesPlugin;
 import me.tylergrissom.chatpuzzles.menu.ManagePuzzlesGUI;
 import me.tylergrissom.chatpuzzles.menu.MenuGUI;
+import me.tylergrissom.chatpuzzles.menu.StatsGUI;
 import me.tylergrissom.chatpuzzles.message.Message;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -75,7 +76,11 @@ public class PuzzlesCommand extends CommandBase {
                 }
             } else if (arg.equalsIgnoreCase("stats")) {
                 if (sender.hasPermission("puzzles.stats")) {
-                    sender.sendMessage("§4§lX §cThis feature is coming soon!");
+                    if (sender instanceof Player) {
+                        Player p = ((Player) sender);
+
+                        new StatsGUI(getPlugin(), p).show(p);
+                    }
                 } else {
                     sender.sendMessage(Message.NO_PERMISSION.get());
                 }
