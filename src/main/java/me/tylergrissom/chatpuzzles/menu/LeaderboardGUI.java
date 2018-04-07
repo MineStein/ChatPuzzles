@@ -1,5 +1,6 @@
 package me.tylergrissom.chatpuzzles.menu;
 
+import javafx.util.Pair;
 import lombok.Getter;
 import me.tylergrissom.chatpuzzles.ChatPuzzlesPlugin;
 import me.tylergrissom.chatpuzzles.item.ItemBuilder;
@@ -10,16 +11,26 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.List;
+import java.util.UUID;
+
 /**
  * Copyright Tyler Grissom 2018
  */
 public class LeaderboardGUI extends MenuGUI {
 
     @Getter
+    private ChatPuzzlesPlugin plugin;
+
+    @Getter
     private ItemStack placeholder;
 
     public LeaderboardGUI(ChatPuzzlesPlugin plugin) {
         super("Leaderboard", 54, plugin);
+
+        this.plugin = plugin;
+
+        List<Pair<UUID, Integer>> guesses = getPlugin().getConfigurationManager().getCorrectGuesses();
 
         placeholder = new ItemBuilder()
                 .type(Material.STAINED_GLASS_PANE)

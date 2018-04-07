@@ -1,5 +1,5 @@
 name: ChatPuzzles
-version: 1.0.1
+version: 1.0.4
 main: me.tylergrissom.chatpuzzles.ChatPuzzlesPlugin
 
 description: Chat puzzles for Rowling's Realm!

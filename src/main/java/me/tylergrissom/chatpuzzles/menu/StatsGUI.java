@@ -4,11 +4,16 @@ import lombok.Getter;
 import me.tylergrissom.chatpuzzles.ChatPuzzlesPlugin;
 import me.tylergrissom.chatpuzzles.config.PlayerData;
 import me.tylergrissom.chatpuzzles.item.ItemBuilder;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.SkullType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.SkullMeta;
+
+import java.util.Arrays;
 
 /**
  * Copyright Tyler Grissom 2018
@@ -32,15 +37,29 @@ public class StatsGUI extends MenuGUI {
 
         PlayerData pd = new PlayerData(player);
 
-        correctGuesses = new ItemBuilder()
-                .type(Material.BOOK)
-                .name("§bPlayer Statistics")
-                .lore(
-                        "",
-                        "§7Name§8: §e" + player.getName(),
-                        "§7Correct guesses§8: §e" + pd.getCorrectGuesses()
-                )
-                .build();
+        correctGuesses = new ItemStack(Material.SKULL_ITEM, 1, (byte) SkullType.PLAYER.ordinal()); {
+            SkullMeta meta = (SkullMeta) correctGuesses.getItemMeta();
+
+            meta.setOwningPlayer(Bukkit.getOfflinePlayer(getPlayer().getName()));
+            meta.setDisplayName("§bPlayer Statistics");
+            meta.setLore(Arrays.asList(
+                    "",
+                    "§7Name§8: §e" + player.getName(),
+                    "§7Correct guesses§8: §e" + pd.getCorrectGuesses()
+            ));
+
+            correctGuesses.setItemMeta(meta);
+        }
+
+//        correctGuesses = new ItemBuilder()
+//                .type(Material.BOOK)
+//                .name("§bPlayer Statistics")
+//                .lore(
+//                        "",
+//                        "§7Name§8: §e" + player.getName(),
+//                        "§7Correct guesses§8: §e" + pd.getCorrectGuesses()
+//                )
+//                .build();
 
         leaderboard = new ItemBuilder()
                 .type(Material.MAP)

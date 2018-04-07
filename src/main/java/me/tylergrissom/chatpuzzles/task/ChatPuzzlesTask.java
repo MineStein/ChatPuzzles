@@ -1,16 +1,12 @@
 package me.tylergrissom.chatpuzzles.task;
 
+import io.netty.util.internal.ThreadLocalRandom;
+import lombok.Getter;
 import me.tylergrissom.chatpuzzles.ChatPuzzleManager;
 import me.tylergrissom.chatpuzzles.ChatPuzzlesPlugin;
 import me.tylergrissom.chatpuzzles.event.PuzzleAnnounceEvent;
-import io.netty.util.internal.ThreadLocalRandom;
-import lombok.Getter;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 
 /**
  * Copyright Tyler Grissom 2018
@@ -37,6 +33,8 @@ public class ChatPuzzlesTask extends BukkitRunnable {
 
     public void run() {
         ChatPuzzleManager cpm = plugin.getChatPuzzleManager();
+
+        if (cpm.getPuzzles().isEmpty()) return;
 
         boolean completed = true;
 
@@ -87,7 +85,7 @@ public class ChatPuzzlesTask extends BukkitRunnable {
 
         Bukkit.getOnlinePlayers()
                 .stream()
-                .filter((Predicate<Player>) player -> player.hasPermission("puzzles.view"))
-                .forEach((Consumer<Player>) player -> player.sendMessage(format));
+                .filter(player -> player.hasPermission("puzzles.view"))
+                .forEach(player -> player.sendMessage(format));
     }
 }
